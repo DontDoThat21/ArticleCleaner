@@ -43,7 +43,7 @@
             
             for (const el of allElements) {
                 const textLength = el.textContent.trim().length;
-                if (textLength > maxLength && textLength > 500) {
+                if (textLength > maxLength && textLength > FALLBACK_THRESHOLD) {
                     maxLength = textLength;
                     content = el;
                 }
