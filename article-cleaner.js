@@ -106,6 +106,7 @@
         // Create close button
         const closeBtn = document.createElement('button');
         closeBtn.textContent = '✕ Close Reader';
+        closeBtn.setAttribute('aria-label', 'Close Reader View');
         closeBtn.style.cssText = `
             position: fixed;
             top: 20px;
