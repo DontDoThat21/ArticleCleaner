@@ -10,7 +10,7 @@ Simple bookmarklet that cleans greedy paywall format contents.
 
 1. **Copy the bookmarklet code**: 
    ```javascript
-   javascript:(function(){var d=document,c=d.querySelector('article')||d.querySelector('main')||d.querySelector('.content');if(!c){var a=d.querySelectorAll('div'),m=0;for(var i=0;i<a.length;i++)if(a[i].textContent.length>m){m=a[i].textContent.length;c=a[i]}}if(c)d.body.innerHTML='<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;overflow:auto;padding:20px"><button onclick="location.reload()">X</button>'+c.innerHTML})();
+   javascript:(function(){var d=document;if(d.getElementById("a"))return;var c=d.querySelector("article")||d.querySelector("main")||d.querySelector(".content");if(!c){var a=d.querySelectorAll("div"),m=0;for(var i=0;i<a.length;i++)if(a[i].textContent.length>m){m=a[i].textContent.length;c=a[i]}}if(!c)return alert("No content");var o=d.createElement("div");o.id="a";o.innerHTML="<div style=\"position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;overflow:auto;padding:20px\"><button onclick=\"this.parentNode.parentNode.remove()\" style=\"float:right;background:#333;color:#fff;border:0;padding:8px;cursor:pointer\">X</button><div style=\"max-width:700px;margin:0 auto\">"+c.innerHTML+"</div></div>";d.body.appendChild(o)})();
    ```
 
 2. **Add to bookmarks**:
@@ -50,7 +50,7 @@ The bookmarklet attempts to identify content using:
 
 ## 📏 Technical Specifications
 
-- **Size**: 462 characters (under 500-character bookmark limit)
+- **Size**: 740 characters (bookmarklet functionality over size optimization)
 - **Format**: Single JavaScript bookmarklet with `javascript:` prefix
 - **Dependencies**: None - pure JavaScript
 - **Compatibility**: Chromium browsers (Chrome, Edge, Opera)
