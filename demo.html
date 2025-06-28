@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArticleCleaner Bookmarklet Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .nav {
+            background: #666;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .ad {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .content {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .bookmarklet-link {
+            display: inline-block;
+            background: #007cba;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .instruction {
+            background: #e7f3ff;
+            border-left: 4px solid #007cba;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sample News Website</h1>
+        <p>This is a demo page with typical website clutter</p>
+    </div>
+    
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Sports</a>
+        <a href="#">Technology</a>
+        <a href="#">Contact</a>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">Breaking: Another Story</a></li>
+                <li><a href="#">Opinion: Something Important</a></li>
+                <li><a href="#">Tech: New Innovation</a></li>
+            </ul>
+            
+            <div class="ad">
+                <h4>Advertisement</h4>
+                <p>Buy our amazing product now! 50% off limited time!</p>
+            </div>
+            
+            <h3>Popular Now</h3>
+            <ul>
+                <li><a href="#">Trending Story #1</a></li>
+                <li><a href="#">Viral Video</a></li>
+                <li><a href="#">Celebrity News</a></li>
+            </ul>
+        </div>
+        
+        <article class="content">
+            <h1>Revolutionary Technology Changes Everything We Know About Computing</h1>
+            <p><em>Published on March 15, 2024 by Tech Reporter</em></p>
+            
+            <div class="instruction">
+                <strong>Test the ArticleCleaner Bookmarklet:</strong><br>
+                Drag this link to your bookmarks bar: 
+                <a class="bookmarklet-link" href='javascript:(function(){var d=document,c=d.querySelector("article")||d.querySelector("main")||d.querySelector(".content");if(!c){var a=d.querySelectorAll("div"),m=0;for(var i=0;i<a.length;i++)if(a[i].textContent.length>m){m=a[i].textContent.length;c=a[i]}}if(c)d.body.innerHTML="<div style=\"position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;overflow:auto;padding:20px\"><button onclick=\"location.reload()\">X</button>"+c.innerHTML})();'>📖 ArticleCleaner</a>
+                <br><small>Then click the bookmark to activate clean reader mode!</small>
+            </div>
+            
+            <p>In a groundbreaking development that promises to revolutionize the technology industry, scientists at a leading research institution have announced a major breakthrough in quantum computing that could change everything we know about computational power and efficiency.</p>
+            
+            <h2>The Discovery</h2>
+            <p>The research team, led by Dr. Jane Smith, has successfully demonstrated a new approach to quantum error correction that maintains quantum coherence for unprecedented durations. This breakthrough addresses one of the most significant challenges in quantum computing: maintaining the delicate quantum states required for complex calculations.</p>
+            
+            <div class="ad">
+                <h4>Sponsored Content</h4>
+                <p>Learn quantum computing with our online course! Sign up today!</p>
+            </div>
+            
+            <h2>Implications for the Future</h2>
+            <p>This development has far-reaching implications across multiple industries. Financial institutions could perform complex risk calculations in seconds rather than hours. Drug discovery could be accelerated dramatically, potentially leading to breakthrough treatments for diseases that have plagued humanity for decades.</p>
+            
+            <h3>Industry Response</h3>
+            <p>Major technology companies have already begun investing heavily in this new approach. "This changes everything," said John Doe, CTO of a leading tech company. "We're looking at a future where current limitations simply don't exist."</p>
+            
+            <p>The research, published in the latest issue of Quantum Science Journal, details the methodology and reproduces the results across multiple test scenarios. The team expects commercial applications to become available within the next five years.</p>
+            
+            <h2>Technical Details</h2>
+            <p>The breakthrough involves a novel application of topological quantum error correction codes combined with advanced machine learning algorithms that can predict and compensate for quantum decoherence in real-time.</p>
+            
+            <p>While the technical details are complex, the implications are clear: we are on the verge of a new era in computing that will make today's most powerful supercomputers look like pocket calculators.</p>
+            
+            <h2>Conclusion</h2>
+            <p>As we stand on the brink of this quantum revolution, it's important to consider both the tremendous opportunities and the challenges that lie ahead. This technology will undoubtedly transform our world, but it will require careful consideration of its societal impact and ethical implications.</p>
+            
+            <p>The future of computing has arrived, and it's more exciting than we ever imagined.</p>
+        </article>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 Sample News Corp. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service | Contact Us</p>
+    </div>
+</body>
+</html>

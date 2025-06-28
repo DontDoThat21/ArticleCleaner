@@ -1,0 +1,19 @@
+# Temporary and build files
+.git/
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+desktop.ini
